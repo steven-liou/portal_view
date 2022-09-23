@@ -1,9 +1,9 @@
 import { Box, Stack } from '@mui/material';
-import { ChannelCard, VideoCard } from 'components';
+import { ChannelCard, Loader, VideoCard } from 'components';
 import React from 'react';
 
 function Videos({ videos, direction }) {
-  if (!videos?.length) return 'Loading...';
+  if (!videos?.length) return <Loader />;
   return (
     <div>
       <Stack
